@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn0" type="id" />
+    <item name="btn1" type="id" />
+    <item name="btn2" type="id" />
+    <item name="btn3" type="id" />
+    <item name="btn4" type="id" />
+    <item name="btn5" type="id" />
+    <item name="btn6" type="id" />
+    <item name="btn7" type="id" />
+    <item name="btn8" type="id" />
+    <item name="btn9" type="id" />
+    <item name="butnPn" type="id" />
+    <item name="btnPn" type="id" />
+    <item name="btnSuma" type="id" />
+    <item name="btnResta" type="id" />
+    <item name="btnMultiplicar" type="id" />
+    <item name="btnDividir" type="id" />
+    <item name="btnIgual" type="id" />
+    <item name="btnRaiz" type="id" />
+    <item name="btnExp" type="id" />
+    <item name="btnBorrar" type="id" />
+    <item name="btnLimpiar" type="id" />
+    <item name="btnSeno" type="id" />
+    <item name="btnCoseno" type="id" />
+    <item name="btnTangente" type="id" />
+</resources>
