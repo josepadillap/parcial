@@ -19,6 +19,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     boolean dividir = false;
     boolean igual = false;
     Double[] numero = new Double[20];
+    double resultado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +65,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        TextView pantalla = (TextView)findViewById(R.id.textView2);
+        TextView pantalla = (TextView) findViewById(R.id.textView2);
         int seleccion = view.getId();
         String a = pantalla.getText().toString();
 
@@ -101,44 +102,42 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.buttonSumar:
                 suma = true;
-                numero [0] = Double.parseDouble(a);
+                numero[0] = Double.parseDouble(a);
                 pantalla.setText(a + "sumar");
                 break;
             case R.id.buttonRestar:
                 resta = true;
-                numero [0] = Double.parseDouble(a);
+                numero[0] = Double.parseDouble(a);
                 pantalla.setText(a + "restar");
                 break;
             case R.id.buttonMultiplicar:
                 multiplicar = true;
-                numero [0] = Double.parseDouble(a);
+                numero[0] = Double.parseDouble(a);
                 pantalla.setText(a + "multiplicar");
                 break;
             case R.id.buttonDividir:
                 dividir = true;
-                numero [0] = Double.parseDouble(a);
+                numero[0] = Double.parseDouble(a);
                 pantalla.setText(a + "dividir");
                 break;
             case R.id.buttonIgual:
-                double resultado;
-                if(suma == true){
 
-                    resultado = numero[0] + numero[1];
-                    pantalla.setText(""+resultado);
-                }else if(resta == true){
-                    {
-                        resultado = numero[0] - numero[1];
-                        pantalla.setText("" + resultado);
-                    }else if(multiplicar == true){{
+                numero[1] = Double.parseDouble(a);
 
-                        resultado = numero[0]*numero[1];
-                        pantalla.setText(""+resultado);
-                    }else if(dividir == true){{
-                        resultado = numero[0]/numero[1];
-                    }}
-
-            }}
-                pantalla.setText(a + "igual");
+                if (suma == true) {
+                    resultado = (numero[0] + numero[1]);
+                    pantalla.setText(String.valueOf(resultado));
+                } else if (resta == true) {
+                    resultado = (numero[0] - numero[1]);
+                    pantalla.setText(String.valueOf(resultado));
+                } else if (multiplicar == true) {
+                    resultado = (numero[0] * numero[1]);
+                    pantalla.setText(String.valueOf(resultado));
+                } else if (dividir == true) {
+                    resultado = (numero[0] / numero[1]);
+                    pantalla.setText(String.valueOf(resultado));
+                }
+        
                 break;
             case R.id.buttonPorciento:
                 if(decimal == false) {
